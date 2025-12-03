@@ -1,7 +1,7 @@
 [project]
 name = "weather"
 version = "0.1.0"
-description = "Add your description here"
+description = "A CLI tool for fetching weather forecasts and alerts using the NWS API and MCP."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

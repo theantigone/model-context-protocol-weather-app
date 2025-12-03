@@ -74,9 +74,9 @@ This tool is designed to be used with a Gemini-powered CLI. Once the environment
 
 ### Running the MCP Server
 
-To start the `mcp` server, run the `main.py` file:
+To start the `mcp` server, run the `weather.py` file:
 ```bash
-uv run main.py
+uv run weather.py
 ```
 This will start the server, making the `get_alerts` and `get_forecast` tools available.
 
@@ -97,10 +97,23 @@ What are the active weather alerts in Virginia?
 ```
 
 ## Project Structure
-- `main.py`: Entry point for the MCP server.
-- `weather.py`: Contains the core logic for interacting with the NWS API and defines `get_alerts` and `get_forecast` tools.
+- `weather.py`: Main entry point for the MCP server. Contains the core logic for interacting with the NWS API.
+- `main.py`: Basic entry point example.
+- `test_weather.py`: Basic tests for the application.
 - `pyproject.toml`: Project metadata and dependencies.
 - `README.md`: This file.
+
+## Testing
+
+To run the tests, you will need to have `pytest` installed. You can run the tests using `uv`:
+
+```bash
+uv run pytest test_weather.py
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 For any questions or issues, please contact qhoang@wm.edu.
