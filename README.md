@@ -18,7 +18,18 @@ This project provides a command-line interface (CLI) tool for fetching weather f
     cd weather
     ```
 
-2.  **Install dependencies with uv:**
+2.  **Install uv (if you haven't already):**
+
+    You can install `uv` using the recommended `curl` method:
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+    Alternatively, if you have `pip` installed, you can use:
+    ```bash
+    pip install uv
+    ```
+
+3.  **Install dependencies with uv:**
     ```bash
     uv sync
     ```
