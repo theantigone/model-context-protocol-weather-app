@@ -18,17 +18,11 @@ This project provides a command-line interface (CLI) tool for fetching weather f
     cd weather
     ```
 
-2.  **Create and activate a virtual environment:**
+2.  **Install dependencies with uv:**
     ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
+    uv sync
     ```
-
-3.  **Install dependencies:**
-    ```bash
-    pip install -e .
-    ```
-    This will install `httpx` and `mcp[cli]` as defined in `pyproject.toml`.
+    This will create a virtual environment in `.venv` and install `httpx` and `mcp[cli]` as defined in `pyproject.toml`.
 
 ## Usage
 
@@ -38,7 +32,7 @@ This tool is designed to be used with a Gemini-powered CLI. Once the environment
 
 To start the `mcp` server, run the `main.py` file:
 ```bash
-python main.py
+uv run main.py
 ```
 This will start the server, making the `get_alerts` and `get_forecast` tools available.
 
