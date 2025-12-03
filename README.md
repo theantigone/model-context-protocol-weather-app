@@ -24,6 +24,39 @@ This project provides a command-line interface (CLI) tool for fetching weather f
     ```
     This will create a virtual environment in `.venv` and install `httpx` and `mcp[cli]` as defined in `pyproject.toml`.
 
+## Gemini CLI Setup
+
+To interact with this tool, you'll need the Gemini CLI. If you don't have it installed, follow these steps:
+
+### Install the Gemini CLI
+
+```bash
+uv pip install --upgrade gemini-cli
+```
+
+### Obtain an API Key
+
+To use the Gemini models, you need an API key. You can obtain one from:
+
+*   **Google AI Studio**: Visit [https://aistudio.google.com/](https://aistudio.google.com/) to generate an API key for free.
+*   **Google Cloud**: If you're a Google Cloud user, you can manage API keys through the Google Cloud Console.
+
+Once you have your API key, you should set it as an environment variable named `GEMINI_API_KEY`:
+
+```bash
+export GEMINI_API_KEY="your-api-key-here"
+```
+
+### Introduction to Gemini CLI
+
+The Gemini CLI allows you to chat with Gemini models and interact with tools like the ones provided in this repository. To start a chat session, simply run:
+
+```bash
+gemini chat
+```
+
+When the CLI starts, it will provide context about your project (like the file structure). You can then type your prompts, and the Gemini model will respond, potentially using the tools defined in `weather.py`.
+
 ## Usage
 
 This tool is designed to be used with a Gemini-powered CLI. Once the environment is set up and the `mcp` server is running, you can interact with the `get_alerts` and `get_forecast` tools.
